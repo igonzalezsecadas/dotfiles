@@ -10,6 +10,8 @@ $git_status\
 $all\
 $character"""
 
+add_newline = false
+
 [username]
 show_always = true
 format = '[$user ](bg:red fg:black)'
