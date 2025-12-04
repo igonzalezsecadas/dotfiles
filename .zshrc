@@ -30,11 +30,11 @@ alias lsal='ls -la'
 
 alias vim='nvim'
 
-alias gst= 'git status'
-alias gc= 'git commit'
-alias ga= 'git add'
-alias gpo= 'git push origin'
-alias gpu= 'git pull origin'
+alias gst='git status'
+alias gc='git commit'
+alias ga='git add'
+alias gpo='git push origin'
+alias gpu='git pull origin'
 
 # Keybinds
 bindkey -e
