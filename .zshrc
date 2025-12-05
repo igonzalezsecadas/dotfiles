@@ -28,7 +28,8 @@ alias ls='ls --color'
 alias lsa='ls -a'
 alias lsal='ls -la'
 
-alias vim='nvim'
+alias tmn='tmux new-session -t'
+alias tma='tmux a -t' 
 
 alias gst='git status'
 alias gc='git commit'
