@@ -12,7 +12,7 @@ vim.opt.smartindent = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.undofile = true
-
+vim.opt.signcolumn = "number"
 
 -- Plugins manager
 vim.pack.add({
@@ -52,34 +52,47 @@ require("mason-tool-installer").setup({
         "clangd",
         "pyright",
         "jdtls",
-    }
+        "html",
+    },
+    auto_install = { enable = true},
 })
-
-
 
 vim.lsp.config("lua_ls", {
     settings = {
-		Lua = {
-			runtime = {
-				version = 'LuaJIT',
-			},
-			diagnostics = {
-				globals = {
-					'vim',
-					'require'
-				},
-			},
-			workspace = {
-				library = vim.api.nvim_get_runtime_file("", true),
-			},
-			telemetry = {
-				enable = false,
-			},
-		},
-	},
+        Lua = {
+            runtime = {
+                version = 'LuaJIT',
+            },
+            diagnostics = {
+                globals = {
+                    'vim',
+                    'require'
+                },
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
 })
 
-require("blink.cmp").setup()
+require("blink.cmp").setup({
+    signature = { enabled = true },
+    completion = {
+        documentation = { auto_show = false },
+        menu = {
+            auto_show = true,
+            draw = {
+                treesitter = { "lsp" },
+                columns = { { "kind_icon", "label", "label_description", gap = 1 }, { "kind" } },
+            },
+        },
+    },
+})
+
 -- Treesitter
 local treesitter = require("nvim-treesitter")
 treesitter.setup({
@@ -108,21 +121,21 @@ treesitter.setup({
 -- Theme and lualine config
 require("pywal").setup()
 vim.api.nvim_set_hl(0, "CursorLine", {
-    bg = "#3c3f41",  -- JetBrains Darcula style background for cursor line
+    bg = "#3c3f41", -- JetBrains Darcula style background for cursor line
 })
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFCC66", bold = true })
 local fg_colors = {
-    Normal     = "#A9B7C6",           -- texto normal
-    Comment    = "#808080",           -- comentarios
-    Keyword    = "#CC7832",           -- palabras clave
-    Identifier = "#A9B7C6",           -- nombres de variables
-    Function   = "#FFC66D",           -- funciones
-    Statement  = "#CC7832",           -- declaraciones
-    Type       = "#A9B7C6",           -- tipos
-    Constant   = "#6897BB",           -- constantes
-    String     = "#6A8759",           -- cadenas
-    Number     = "#6897BB",           -- números
-    Operator   = "#A9B7C6",           -- operadores
+    Normal     = "#A9B7C6", -- texto normal
+    Comment    = "#808080", -- comentarios
+    Keyword    = "#CC7832", -- palabras clave
+    Identifier = "#A9B7C6", -- nombres de variables
+    Function   = "#FFC66D", -- funciones
+    Statement  = "#CC7832", -- declaraciones
+    Type       = "#A9B7C6", -- tipos
+    Constant   = "#6897BB", -- constantes
+    String     = "#6A8759", -- cadenas
+    Number     = "#6897BB", -- números
+    Operator   = "#A9B7C6", -- operadores
 }
 
 for group, color in pairs(fg_colors) do
@@ -172,11 +185,6 @@ require("lualine").setup {
     extensions = {}
 }
 
-
-
-
-
-
 -- Keybinds
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
@@ -188,3 +196,8 @@ local map = vim.keymap.set
 local current = 1
 
 map("n", "<leader>lf", vim.lsp.buf.format)
+map("n", "<leader>gr", "<cmd>Telescope lsp_references<CR>")
+map("n", "<leader>gd", "<cmd>Telescope lsp_definitions<CR>")
+map("n", "<leader>ff", builtin.find_files)
+
+

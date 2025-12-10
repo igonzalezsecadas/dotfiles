@@ -37,6 +37,14 @@ alias ga='git add'
 alias gpo='git push origin'
 alias gpu='git pull origin'
 
+proyectos_key() {
+  LBUFFER+=" ~/.config/tmux/repos.sh"
+  zle accept-line
+}
+
+zle -N proyectos_key
+bindkey '^F' proyectos_key
+
 # Keybinds
 bindkey -e
 bindkey '^k' history-search-backward
