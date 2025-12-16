@@ -43,7 +43,7 @@ proyectos_key() {
 }
 
 zle -N proyectos_key
-bindkey '^F' proyectos_key
+bindkey '^p' proyectos_key
 
 # Keybinds
 bindkey -e

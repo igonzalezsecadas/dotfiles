@@ -13,6 +13,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.undofile = true
 vim.opt.signcolumn = "number"
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 -- Plugins manager
 vim.pack.add({
@@ -41,7 +42,13 @@ require("luasnip.loaders.from_vscode").lazy_load()
 
 -- Telescope config
 local telescope = require("telescope")
-telescope.setup()
+telescope.setup({
+    pickers = {
+        find_files = {
+            hidden = true
+        }
+    }
+})
 
 -- Mason config
 require("mason").setup()
