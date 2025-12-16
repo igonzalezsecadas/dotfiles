@@ -1,0 +1,136 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Copy">
+      <i c="1" l="1765472789023" />
+    </e>
+    <e n="$Delete">
+      <i c="4" l="1765802888476" />
+    </e>
+    <e n="$Paste">
+      <i c="1" l="1765472793557" />
+    </e>
+    <e n="Actions.ActionsPlugin.GenerateToString">
+      <i c="2" l="1765803105222" />
+    </e>
+    <e n="CloseProject">
+      <i c="6" l="1765472675151" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="720" l="1765803468504" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="1" l="1765803449516" />
+    </e>
+    <e n="EditorChooseLookupItemReplace">
+      <i c="5" l="1765803409272" />
+    </e>
+    <e n="EditorDown">
+      <i c="83" l="1765803409097" />
+    </e>
+    <e n="EditorEnter">
+      <i c="89" l="1765803379144" />
+    </e>
+    <e n="EditorLeft">
+      <i c="15" l="1765803264089" />
+    </e>
+    <e n="EditorRight">
+      <i c="62" l="1765803411446" />
+    </e>
+    <e n="EditorRightWithSelection">
+      <i c="1" l="1765803261306" />
+    </e>
+    <e n="EditorTab">
+      <i c="3" l="1765802390427" />
+    </e>
+    <e n="EditorUp">
+      <i c="38" l="1765803400567" />
+    </e>
+    <e n="Exit">
+      <i c="1" l="1765451169299" />
+    </e>
+    <e n="Generate">
+      <i c="3" l="1765803103425" />
+    </e>
+    <e n="GenerateGetterAndSetter">
+      <i c="1" l="1765803089239" />
+    </e>
+    <e n="HideAllWindows">
+      <i c="1" l="1765802576695" />
+    </e>
+    <e n="InsertInlineCompletionAction">
+      <i c="24" l="1765803181872" />
+    </e>
+    <e n="MoreRunToolbarActions">
+      <i c="5" l="1765472659370" />
+    </e>
+    <e n="NewClass">
+      <i c="2" l="1765802906688" />
+    </e>
+    <e n="NewProject">
+      <i c="1" l="1765472724955" />
+    </e>
+    <e n="OpenFile">
+      <i c="1" l="1765878545688" />
+    </e>
+    <e n="Run">
+      <i c="1" l="1765472879785" />
+    </e>
+    <e n="RunAnything">
+      <i c="1" l="1765471543963" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="7" l="1765472835686" />
+    </e>
+    <e n="ShowProjectStructureSettings">
+      <i c="7" l="1765472661642" />
+    </e>
+    <e n="ShowSettings">
+      <i c="1" l="1765472836665" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="1" l="1765472855515" />
+    </e>
+    <e n="WelcomeScreen.CreateNewProject">
+      <i c="5" l="1765472677090" />
+    </e>
+    <e n="WelcomeScreen.ManageLicense">
+      <i c="2" l="1765451097226" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="3" l="1765472679573" />
+    </e>
+    <e n="WelcomeScreen.RemoveSelected">
+      <i c="1" l="1765472614588" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="1" l="1765472643226" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$TrafficLightAction">
+      <i c="1" l="1765471165968" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="3" l="1765472581764" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$5">
+      <i c="5" l="1765802909123" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
+      <i c="3" l="1765802784458" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
+      <i c="12" l="1765472717870" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$4">
+      <i c="2" l="1765451095723" />
+    </e>
+    <e n="com.intellij.toolWindow.ShowMoreToolWindowsAction">
+      <i c="1" l="1765471239587" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="3" l="1765803115987" />
+    </e>
+    <e n="com.intellij.ui.dsl.builder.components.SegmentedButtonAction">
+      <i c="1" l="1765450732557" />
+    </e>
+  </component>
+</application>
