@@ -1,1 +1,4 @@
 .config/systemd
+.config/JetBrains
+.config/go
+.config/mozilla
