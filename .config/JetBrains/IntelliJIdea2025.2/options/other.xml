@@ -19,6 +19,7 @@
     "NextRunPlatformUpdateBuild": "IU-252.28539.13",
     "NextRunPlatformUpdateSelfBuild": "IU-252.28238.7",
     "NextRunPlatformUpdateVersion": "2025.2.6",
+    "RunOnceActivity.TerminalFontSettingsService.fixStoredNonMonospacedFonts": "true",
     "RunOnceActivity.TerminalOptionsProvider.migration.2025.1.1": "true",
     "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
     "RunOnceActivity.git.modal.commit.toggle": "true",

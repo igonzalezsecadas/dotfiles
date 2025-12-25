@@ -16,24 +16,24 @@
             </state>
           </provider>
         </entry>
-        <tab><![CDATA[{"tabTitle":"Catalogue.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+        <tab>{&quot;tabTitle&quot;:&quot;Catalogue.java&quot;,&quot;foregroundColor&quot;:-2104859,&quot;textAttributes&quot;:{&quot;name&quot;:&quot;a&quot;},&quot;icon&quot;:[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}</tab>
       </file>
       <file>
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" file-id="198703" managing-fs="1764750968805">
           <provider editor-type-id="text-editor" selected="true" />
         </entry>
-        <tab><![CDATA[{"tabTitle":"Main.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+        <tab>{&quot;tabTitle&quot;:&quot;Main.java&quot;,&quot;foregroundColor&quot;:-2104859,&quot;textAttributes&quot;:{&quot;name&quot;:&quot;a&quot;},&quot;icon&quot;:[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}</tab>
       </file>
       <file>
         <entry file="file://$PROJECT_DIR$/src/main/java/Book.java" file-id="198696" managing-fs="1764750968805">
           <provider editor-type-id="text-editor" selected="true" />
         </entry>
-        <tab><![CDATA[{"tabTitle":"Book.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+        <tab>{&quot;tabTitle&quot;:&quot;Book.java&quot;,&quot;foregroundColor&quot;:-2104859,&quot;textAttributes&quot;:{&quot;name&quot;:&quot;a&quot;},&quot;icon&quot;:[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}</tab>
       </file>
       <file current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Loan.java" file-id="198757" managing-fs="1764750968805">
           <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="1131">
+            <state relative-caret-position="231">
               <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#1357#1358#0" expanded="true" />
@@ -41,18 +41,27 @@
             </state>
           </provider>
         </entry>
-        <tab><![CDATA[{"tabTitle":"Loan.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+        <tab>{&quot;tabTitle&quot;:&quot;Loan.java&quot;,&quot;foregroundColor&quot;:-2104859,&quot;textAttributes&quot;:{&quot;name&quot;:&quot;a&quot;},&quot;icon&quot;:[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}</tab>
       </file>
     </leaf>
   </component>
   <component name="FileTypeUsageLocalSummary"><![CDATA[{
   "data": {
     "JAVA": {
-      "usageCount": 10,
-      "lastUsed": 1765878541995
+      "usageCount": 18,
+      "lastUsed": 1766390447834
     }
   }
 }]]></component>
+  <component name="GitBranchesPopupTreeState">
+    <expand>
+      <path>
+        <item name="TreeRoot" type="a5f834f:GitBranchesTreeModel$TreeRoot" />
+        <item name="LOCAL" type="6e158aa5:GitBranchType$LOCAL" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="IdeDocumentHistory">{
   &quot;changedPaths&quot;: [
     &quot;/home/mayboll/dev/librarily/src/main/java/Member.java&quot;,
@@ -68,7 +77,7 @@
   </component>
   <component name="LanguageUsageStatistics">
     <language id="JAVA">
-      <summary usageCount="10" lastUsage="1765878541995" />
+      <summary usageCount="18" lastUsage="1766390447834" />
     </language>
   </component>
   <component name="MavenProjectNavigator">
@@ -87,24 +96,6 @@
             <path>
               <item name="librarily" type="b2602c69:ProjectViewProjectNode" />
               <item name="dir{file:///home/mayboll/dev/librarily}" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="librarily" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily}" type="462c0819:PsiDirectoryNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily/src}" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="librarily" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily}" type="462c0819:PsiDirectoryNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily/src}" type="462c0819:PsiDirectoryNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily/src/main}" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="librarily" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily}" type="462c0819:PsiDirectoryNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily/src}" type="462c0819:PsiDirectoryNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily/src/main}" type="462c0819:PsiDirectoryNode" />
-              <item name="dir{file:///home/mayboll/dev/librarily/src/main/java}" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -132,65 +123,38 @@
               <presentation>
                 <attributes>
                   <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.settings" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".settings" />
+                <item name="dir{file:///home/mayboll/dev/librarily/.settings}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
                     <entry key="filePath" value="$PROJECT_DIR$/src" />
                   </map>
                 </attributes>
                 <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="src" />
                 <item name="dir{file:///home/mayboll/dev/librarily/src}" type="462c0819:PsiDirectoryNode" />
-                <presentation>
-                  <attributes>
-                    <map>
-                      <entry key="filePath" value="$PROJECT_DIR$/src/main" />
-                    </map>
-                  </attributes>
-                  <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="main" />
-                  <item name="dir{file:///home/mayboll/dev/librarily/src/main}" type="462c0819:PsiDirectoryNode" />
-                  <presentation>
-                    <attributes>
-                      <map>
-                        <entry key="filePath" value="$PROJECT_DIR$/src/main/java" />
-                      </map>
-                    </attributes>
-                    <data iconPath="expui/nodes/sourceRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="java" />
-                    <item name="dir{file:///home/mayboll/dev/librarily/src/main/java}" type="462c0819:PsiDirectoryNode" />
-                    <presentation>
-                      <attributes>
-                        <map>
-                          <entry key="filePath" value="$PROJECT_DIR$/src/main/java/Book.java" />
-                        </map>
-                      </attributes>
-                      <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="Book" />
-                      <item name="Book" type="1a9f42e2:ClassTreeNode" />
-                    </presentation>
-                    <presentation>
-                      <attributes>
-                        <map>
-                          <entry key="filePath" value="$PROJECT_DIR$/src/main/java/Catalogue.java" />
-                        </map>
-                      </attributes>
-                      <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="Catalogue" />
-                      <item name="Catalogue" type="1a9f42e2:ClassTreeNode" />
-                    </presentation>
-                    <presentation>
-                      <attributes>
-                        <map>
-                          <entry key="filePath" value="$PROJECT_DIR$/src/main/java/Loan.java" />
-                        </map>
-                      </attributes>
-                      <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="Loan" />
-                      <item name="Loan" type="1a9f42e2:ClassTreeNode" />
-                    </presentation>
-                    <presentation>
-                      <attributes>
-                        <map>
-                          <entry key="filePath" value="$PROJECT_DIR$/src/main/java/Main.java" />
-                        </map>
-                      </attributes>
-                      <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="Main" />
-                      <item name="Main" type="1a9f42e2:ClassTreeNode" />
-                    </presentation>
-                  </presentation>
-                </presentation>
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/target" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="target" />
+                <item name="dir{file:///home/mayboll/dev/librarily/target}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.classpath" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/eclipse.svg" iconPlugin="com.intellij" isLeaf="true" text=".classpath" />
+                <item name=".classpath" type="ab9368bb:PsiFileNode" />
               </presentation>
               <presentation>
                 <attributes>
@@ -200,6 +164,15 @@
                 </attributes>
                 <data iconPath="expui/fileTypes/ignored.svg" iconPlugin="com.intellij" isLeaf="true" text=".gitignore" />
                 <item name=".gitignore" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.project" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/eclipse.svg" iconPlugin="com.intellij" isLeaf="true" text=".project" />
+                <item name=".project" type="ab9368bb:PsiFileNode" />
               </presentation>
               <presentation>
                 <attributes>
@@ -227,8 +200,30 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" currentWorkingDirectory="$PROJECT_DIR$" />
+    </option>
+  </component>
+  <component name="TerminalTabsStorage">
+    <option name="tabs">
+      <TerminalSessionPersistedTab name="Local" workingDirectory="$PROJECT_DIR$" />
+    </option>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4817000" />
+    <option name="totallyTimeSpent" value="4937000" />
   </component>
   <component name="ToolWindowManager">
     <layoutV2>
@@ -237,9 +232,9 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.32961166" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32961166" />
+      <window_info anchor="bottom" id="Services" order="4" weight="0.32961166" />
       <window_info anchor="bottom" id="Build" order="5" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
@@ -247,7 +242,7 @@
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
       <window_info anchor="right" id="ElectroJunToolWindow" order="5" />
-      <unified_weights left="0.13562435" />
+      <unified_weights bottom="0.32961166" left="0.13562435" />
     </layoutV2>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13562435" />
@@ -268,7 +263,10 @@
       <unified_weights left="0.13562435" />
     </layout-to-restore>
     <recentWindows>
+      <value>Terminal</value>
+      <value>Services</value>
       <value>Project</value>
+      <value>Problems View</value>
     </recentWindows>
   </component>
   <component name="WindowStateProjectService">
@@ -306,18 +304,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Loan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1131">
+        <state relative-caret-position="231">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="e#1357#1358#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
