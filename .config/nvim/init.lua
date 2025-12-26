@@ -105,6 +105,8 @@ require("blink.cmp").setup({
     },
 })
 
+vim.diagnostic.config({ virtual_text = true, virtual_lines = false })
+
 -- Treesitter
 local treesitter = require("nvim-treesitter")
 treesitter.setup({
