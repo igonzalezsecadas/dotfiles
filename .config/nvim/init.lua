@@ -15,6 +15,10 @@ vim.opt.undofile = true
 vim.opt.signcolumn = "number"
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
+-- Netrw customization
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
+
 -- Plugins manager
 vim.pack.add({
     { src = "https://github.com/windwp/nvim-autopairs" },
@@ -88,6 +92,7 @@ vim.lsp.config("lua_ls", {
 
 require("blink.cmp").setup({
     signature = { enabled = true },
+    fuzzy = { implementation = "lua" },
     completion = {
         documentation = { auto_show = false },
         menu = {
