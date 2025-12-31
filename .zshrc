@@ -46,7 +46,6 @@ zle -N proyectos_key
 bindkey '^p' proyectos_key
 
 # Keybinds
-set -o vi
 bindkey -e
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
