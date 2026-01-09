@@ -44,6 +44,14 @@
       "rev": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800",
       "src": "https://github.com/mason-org/mason.nvim"
     },
+    "mini.comment": {
+      "rev": "a0c721115faff8d05505c0a12dab410084d9e536",
+      "src": "https://github.com/nvim-mini/mini.comment"
+    },
+    "mini.surround": {
+      "rev": "cc7b9d0a056b5fa6915ffac1cb91f29bf7c96f69",
+      "src": "https://github.com/nvim-mini/mini.surround"
+    },
     "nvim-autopairs": {
       "rev": "7a2c97cccd60abc559344042fefb1d5a85b3e33b",
       "src": "https://github.com/windwp/nvim-autopairs"
@@ -59,6 +67,10 @@
     "nvim-lspconfig": {
       "rev": "f7c6e585fd80d5a2c075ab27ac312ac55bcf1550",
       "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-tree.lua": {
+      "rev": "b8b44b6a2494d086a9177251a119f9daec6cace8",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua"
     },
     "nvim-treesitter": {
       "rev": "42fc28ba918343ebfd5565147a42a26580579482",
