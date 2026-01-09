@@ -2,3 +2,4 @@
 .config/JetBrains
 .config/go
 .config/mozilla
+.config/kitty/current-theme.conf
