@@ -1,10 +1,5 @@
-format = """[](fg:blue)\
-$os\
-[](bg:blue fg:red)\
-$username\
-[](bg:red fg:green)\
-$directory\
-[ ](fg:green)\
+format = """$username\
+$directory \
 $git_branch\
 $git_status\
 $all\
@@ -14,12 +9,12 @@ add_newline = false
 
 [username]
 show_always = true
-format = '[$user ](bg:red fg:black)'
-disabled = false
+format = '[$user](fg:white)'
+disabled = true
 
 [os]
-disabled = false
-style = 'bg:blue fg:black'
+disabled = true
+style = '(fg:white)'
 [os.symbols]
 Alpaquita = " "
 Alpine = " "
@@ -71,7 +66,7 @@ Windows = "󰍲 "
 format = "[$duration](fg:red)"
 
 [directory]
-format = "[$path](bg:green fg:black)"
+format = "[$path](bold fg:white)"
 truncation_length = 2
 truncation_symbol = "…/"
 
