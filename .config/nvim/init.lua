@@ -20,17 +20,18 @@ vim.g.loaded_netrwPlugin = 1
 -- Package management
 vim.pack.add({
 	{ src = "https://github.com/windwp/nvim-autopairs" },
-    { src = "https://github.com/AlphaTechnolog/pywal.nvim" },
+	{ src = "https://github.com/AlphaTechnolog/pywal.nvim" },
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
 	{ src = "https://github.com/brenoprata10/nvim-highlight-colors" },
 	{ src = "https://github.com/mason-org/mason.nvim" },
-	{ src = "https://github.com/mini.nvim/mini.pick" },
+	{ src = "https://github.com/nvim-mini/mini.pick" },
 	{ src = "https://github.com/L3MON4D3/LuaSnip" },
 	{ src = "https://github.com/rafamadriz/friendly-snippets" },
-    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 	{ src = "https://github.com/saghen/blink.cmp" },
 	{ src = "https://github.com/nvim-mini/mini.surround" },
 	{ src = "https://github.com/nvim-mini/mini.comment" },
+	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 })
 
 -- Plugin setup
@@ -60,8 +61,6 @@ require("blink.cmp").setup({
 	},
 })
 
-
-
 -- Keymaps
 local map = vim.keymap
 vim.g.mapleader = " "
@@ -74,7 +73,7 @@ map.set('n', '<leader>cd', ":NvimTreeToggle<CR>")
 map.set('n', 'ff', MiniPick.builtin.files)
 map.set('n', 'fg', MiniPick.builtin.grep_live)
 map.set('n', 'fh', MiniPick.builtin.help)
-map.set('n', 'grd', vim.lsp.buf.definition)
+map.set('n', 'gd', vim.lsp.buf.definition)
 -- grr (go to lsp references)
 -- grn (lsp rename)
 -- grt (go to type definition)
@@ -89,7 +88,7 @@ map.set("n", "<leader>i", function()
 	vim.cmd.wincmd("J")
 	vim.api.nvim_win_set_height(0, 10)
 end)
-map.set({"t", "n"}, "<Esc>", [[<C-\><C-n>]])
+map.set({ "t", "n" }, "<Esc>", [[<C-\><C-n>]])
 
 -- Navigate windows
 map.set("n", "<M-h>", "<C-w>h")
@@ -99,8 +98,74 @@ map.set("n", "<M-l>", "<C-w>l")
 map.set("n", "<leader>sv", ":vsplit<CR>")
 map.set("n", "<leader>sh", ":split<CR>")
 
--- Resize windows
 map.set("n", "<M-Up>", ":resize +1<CR>")
 map.set("n", "<M-Down>", ":resize -1<CR>")
 map.set("n", "<M-Left>", ":vertical resize -1<CR>")
 map.set("n", "<M-Right>", ":vertical resize +1<CR>")
+
+-- Theme and lualine config
+require("pywal").setup()
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFCC66", bold = true })
+vim.api.nvim_set_hl(0, "CursorLine", {
+    bg = "#292e42",   -- Tokyonight (Storm/Moon) cursor line background
+})
+local fg_colors = {
+	Normal     = "#c0caf5",   -- Main text (pale blue-white)
+	Comment    = "#565f89",   -- Dark blue-grey
+	Keyword    = "#bb9af7",   -- Purple
+	Identifier = "#c0caf5",   -- Variables (usually same as Normal in Tokyonight)
+	Function   = "#7aa2f7",   -- Bright Blue
+	Statement  = "#bb9af7",   -- Purple (same as Keyword)
+	Type       = "#2ac3de",   -- Cyan / Teal
+	Constant   = "#ff9e64",   -- Orange
+	String     = "#9ece6a",   -- Green
+	Number     = "#ff9e64",   -- Orange (same as Constant)
+	Operator   = "#89ddff",   -- Light Cyan / Sky Blue
+}
+
+for group, color in pairs(fg_colors) do
+	vim.api.nvim_set_hl(0, group, { fg = color })
+end
+
+require("lualine").setup {
+	options = {
+		icons_enabled = true,
+		theme = 'auto',
+		component_separators = '',
+		section_separators = { left = '', right = '' },
+		component_separators = { '', '' },
+		disabled_filetypes = {
+			statusline = {},
+			winbar = {},
+		},
+		ignore_focus = {},
+		always_divide_middle = true,
+		always_show_tabline = true,
+		globalstatus = false,
+		refresh = {
+			statusline = 100,
+			tabline = 100,
+			winbar = 100,
+		}
+	},
+	sections = {
+		lualine_a = { 'mode' },
+		lualine_b = { 'branch', 'diagnostics' },
+		lualine_c = { { 'filename', path = 1 } },
+		lualine_x = { 'filetype' },
+		lualine_y = { 'progress' },
+		lualine_z = { 'location' }
+	},
+	inactive_sections = {
+		lualine_a = {},
+		lualine_b = {},
+		lualine_c = {},
+		lualine_x = {},
+		lualine_y = {},
+		lualine_z = {}
+	},
+	tabline = {},
+	winbar = {},
+	inactive_winbar = {},
+	extensions = {}
+}
