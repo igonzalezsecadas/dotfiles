@@ -17,6 +17,7 @@ vim.o.smartcase = true
 vim.diagnostic.config({ virtual_text = true })
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.o.hlsearch = false
 
 -- Package management
 vim.pack.add({
@@ -108,21 +109,21 @@ map.set("n", "<M-Right>", ":vertical resize +1<CR>")
 require("pywal").setup()
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFCC66", bold = true })
 vim.api.nvim_set_hl(0, "CursorLine", {
-    bg = "#292e42",   -- Tokyonight (Storm/Moon) cursor line background
+	bg = "#292e42", -- Tokyonight (Storm/Moon) cursor line background
 })
 vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#292e42" })
 local fg_colors = {
-	Normal     = "#c0caf5",   -- Main text (pale blue-white)
-	Comment    = "#565f89",   -- Dark blue-grey
-	Keyword    = "#bb9af7",   -- Purple
-	Identifier = "#c0caf5",   -- Variables (usually same as Normal in Tokyonight)
-	Function   = "#7aa2f7",   -- Bright Blue
-	Statement  = "#bb9af7",   -- Purple (same as Keyword)
-	Type       = "#2ac3de",   -- Cyan / Teal
-	Constant   = "#ff9e64",   -- Orange
-	String     = "#9ece6a",   -- Green
-	Number     = "#ff9e64",   -- Orange (same as Constant)
-	Operator   = "#89ddff",   -- Light Cyan / Sky Blue
+	Normal     = "#c0caf5", -- Main text (pale blue-white)
+	Comment    = "#565f89", -- Dark blue-grey
+	Keyword    = "#bb9af7", -- Purple
+	Identifier = "#c0caf5", -- Variables (usually same as Normal in Tokyonight)
+	Function   = "#7aa2f7", -- Bright Blue
+	Statement  = "#bb9af7", -- Purple (same as Keyword)
+	Type       = "#2ac3de", -- Cyan / Teal
+	Constant   = "#ff9e64", -- Orange
+	String     = "#9ece6a", -- Green
+	Number     = "#ff9e64", -- Orange (same as Constant)
+	Operator   = "#89ddff", -- Light Cyan / Sky Blue
 }
 
 for group, color in pairs(fg_colors) do
