@@ -6,6 +6,7 @@ vim.o.shiftwidth = 2
 vim.o.smartindent = true
 vim.o.winborder = "rounded"
 vim.o.cursorline = true
+vim.o.colorcolumn = "88"
 vim.o.scrolloff = 999
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -109,6 +110,7 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFCC66", bold = true })
 vim.api.nvim_set_hl(0, "CursorLine", {
     bg = "#292e42",   -- Tokyonight (Storm/Moon) cursor line background
 })
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#292e42" })
 local fg_colors = {
 	Normal     = "#c0caf5",   -- Main text (pale blue-white)
 	Comment    = "#565f89",   -- Dark blue-grey
