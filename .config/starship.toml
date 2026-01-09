@@ -67,8 +67,6 @@ format = "[$duration](fg:red)"
 
 [directory]
 format = "[$path](bold fg:white)"
-truncation_length = 2
-truncation_symbol = "…/"
 
 [character]
 success_symbol = "[](bold blue)"
