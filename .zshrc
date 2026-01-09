@@ -14,7 +14,6 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
-zinit light olets/zsh-transient-prompt
 
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::sudo
@@ -74,11 +73,4 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # Starship prompt only showing on terminal emulator
-if [[ "$TERM" != "linux" ]]; then
-    eval "$(starship init zsh)"
-    TRANSIENT_PROMPT_PROMPT='$(starship prompt --terminal-width="$COLUMNS" --keymap="${KEYMAP:-}" --status="$STARSHIP_CMD_STATUS" --pipestatus="${STARSHIP_PIPE_STATUS[*]}" --cmd-duration="${STARSHIP_DURATION:-}" --jobs="$STARSHIP_JOBS_COUNT")'
-TRANSIENT_PROMPT_RPROMPT='$(starship prompt --right --terminal-width="$COLUMNS" --keymap="${KEYMAP:-}" --status="$STARSHIP_CMD_STATUS" --pipestatus="${STARSHIP_PIPE_STATUS[*]}" --cmd-duration="${STARSHIP_DURATION:-}" --jobs="$STARSHIP_JOBS_COUNT")'
-TRANSIENT_PROMPT_TRANSIENT_PROMPT='$(starship module character)'
-else
-    PROMPT='%n@%m %~ %# '
-fi
+PROMPT='%n@%m %~ %# '

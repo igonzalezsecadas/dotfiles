@@ -22,6 +22,7 @@ vim.o.hlsearch = false
 -- Package management
 vim.pack.add({
 	{ src = "https://github.com/windwp/nvim-autopairs" },
+	{ src = "https://github.com/folke/tokyonight.nvim" },
 	{ src = "https://github.com/AlphaTechnolog/pywal.nvim" },
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
 	{ src = "https://github.com/brenoprata10/nvim-highlight-colors" },
@@ -106,29 +107,6 @@ map.set("n", "<M-Left>", ":vertical resize -1<CR>")
 map.set("n", "<M-Right>", ":vertical resize +1<CR>")
 
 -- Theme and lualine config
-require("pywal").setup()
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFCC66", bold = true })
-vim.api.nvim_set_hl(0, "CursorLine", {
-	bg = "#292e42", -- Tokyonight (Storm/Moon) cursor line background
-})
-vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#292e42" })
-local fg_colors = {
-	Normal     = "#c0caf5", -- Main text (pale blue-white)
-	Comment    = "#565f89", -- Dark blue-grey
-	Keyword    = "#bb9af7", -- Purple
-	Identifier = "#c0caf5", -- Variables (usually same as Normal in Tokyonight)
-	Function   = "#7aa2f7", -- Bright Blue
-	Statement  = "#bb9af7", -- Purple (same as Keyword)
-	Type       = "#2ac3de", -- Cyan / Teal
-	Constant   = "#ff9e64", -- Orange
-	String     = "#9ece6a", -- Green
-	Number     = "#ff9e64", -- Orange (same as Constant)
-	Operator   = "#89ddff", -- Light Cyan / Sky Blue
-}
-
-for group, color in pairs(fg_colors) do
-	vim.api.nvim_set_hl(0, group, { fg = color })
-end
 
 require("lualine").setup {
 	options = {
@@ -172,3 +150,5 @@ require("lualine").setup {
 	inactive_winbar = {},
 	extensions = {}
 }
+
+vim.cmd[[colorscheme tokyonight]]

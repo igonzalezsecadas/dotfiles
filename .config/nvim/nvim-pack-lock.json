@@ -56,5 +56,9 @@
       "rev": "d11b673c0e3d6eb8cbee7ea8cf4a8911f6ee24b9",
       "src": "https://github.com/AlphaTechnolog/pywal.nvim"
     },
+    "tokyonight.nvim": {
+      "rev": "5da1b76e64daf4c5d410f06bcb6b9cb640da7dfd",
+      "src": "https://github.com/folke/tokyonight.nvim"
+    }
   }
 }
