@@ -11,13 +11,14 @@ vim.o.scrolloff = 999
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.signcolumn = "yes"
-vim.o.guicursor = "n-v-i-c:block-Cursor"
+vim.o.guicursor = "n-v-i-c-t:block-Cursor"
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.diagnostic.config({ virtual_text = true })
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.o.hlsearch = false
+vim.o.termguicolors = true
 
 -- Package management
 vim.pack.add({
@@ -42,7 +43,7 @@ require("nvim-tree").setup()
 require("nvim-autopairs").setup()
 require("nvim-highlight-colors").setup({})
 require("mason").setup()
-vim.lsp.enable("lua_ls")
+vim.lsp.enable({ "lua_ls", "clangd" })
 require("mini.pick").setup()
 require("luasnip").setup({ enable_autosnippets = true })
 require("luasnip.loaders.from_vscode").lazy_load()
@@ -64,13 +65,14 @@ require("blink.cmp").setup({
 	},
 })
 
+vim.cmd("colorscheme tokyonight-storm")
 -- Keymaps
 local map = vim.keymap
 vim.g.mapleader = " "
 map.set('n', '<leader>o', ':update<CR> :source<CR>')
 map.set('n', '<leader>w', ':write<CR>')
 map.set('n', '<leader>q', ':quit<CR>')
-map.set('n', '<leader>r', ':make<CR>')
+map.set('n', '<leader>b', ':make<CR>')
 map.set('n', '<leader>lf', vim.lsp.buf.format)
 map.set('n', '<leader>cd', ":NvimTreeToggle<CR>")
 map.set('n', 'ff', MiniPick.builtin.files)
@@ -85,13 +87,54 @@ map.set({ 'n', 'v', 'x' }, '<M-y>', '"+y<CR>')
 map.set({ 'n', 'v', 'x' }, '<M-d>', '"+d<CR>')
 map.set({ 'n', 'v', 'x' }, '<M-p>', '"+p<CR>')
 map.set({ 'i', 'c' }, '<M-p>', '<C-r>+')
+
+
+-- Terminal toggle function
 map.set("n", "<leader>i", function()
-	vim.cmd.new()
-	vim.cmd.term()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 10)
+	local term_buf = -1
+	for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+		if vim.bo[buf].buftype == "terminal" then
+			term_buf = buf
+			break
+		end
+	end
+
+	-- 2. Check if that terminal is already visible in a window
+	local term_win = -1
+	if term_buf ~= -1 then
+		term_win = vim.fn.bufwinnr(term_buf)
+	end
+
+	-- 3. Toggle Logic
+	if term_win ~= -1 then
+		-- If terminal is visible, close that window
+		vim.api.nvim_win_close(term_win, true)
+	elseif term_buf ~= -1 then
+		-- If terminal exists but is hidden, open it in a new split
+		vim.cmd("split")
+		vim.cmd("buffer " .. term_buf)
+		vim.cmd("wincmd J")
+		vim.api.nvim_win_set_height(0, 10)
+		vim.cmd("startinsert")
+	else
+		-- No terminal exists at all, create a new one (your original logic)
+		vim.cmd("new")
+		vim.cmd("term")
+		vim.cmd("wincmd J")
+		vim.api.nvim_win_set_height(0, 10)
+		vim.cmd("startinsert")
+	end
 end)
-map.set({ "t", "n" }, "<Esc>", [[<C-\><C-n>]])
+map.set({ "t" }, "<Esc>", [[<C-\><C-n>]])
+
+vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+	pattern = "make",
+	callback = function()
+		if #vim.fn.getqflist() > 0 then
+			vim.cmd("copen 10")
+		end
+	end,
+})
 
 -- Navigate windows
 map.set("n", "<M-h>", "<C-w>h")
@@ -150,5 +193,3 @@ require("lualine").setup {
 	inactive_winbar = {},
 	extensions = {}
 }
-
-vim.cmd[[colorscheme tokyonight]]
