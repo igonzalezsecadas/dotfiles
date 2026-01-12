@@ -66,23 +66,36 @@ require("blink.cmp").setup({
 })
 
 vim.cmd("colorscheme tokyonight-storm")
+
+
 -- Keymaps
+
 local map = vim.keymap
 vim.g.mapleader = " "
+
+
 map.set('n', '<leader>o', ':update<CR> :source<CR>')
 map.set('n', '<leader>w', ':write<CR>')
 map.set('n', '<leader>q', ':quit<CR>')
 map.set('n', '<leader>b', ':make<CR>')
 map.set('n', '<leader>lf', vim.lsp.buf.format)
 map.set('n', '<leader>cd', ":NvimTreeToggle<CR>")
-map.set('n', 'ff', MiniPick.builtin.files)
+
+
+map.set('n', 'ff', function()
+  MiniPick.builtin.cli({ command = { 'rg', '--files', '--hidden', '--no-ignore-vcs' } })
+end)
 map.set('n', 'fg', MiniPick.builtin.grep_live)
 map.set('n', 'fh', MiniPick.builtin.help)
+
+
 map.set('n', 'gd', vim.lsp.buf.definition)
 -- grr (go to lsp references)
 -- grn (lsp rename)
 -- grt (go to type definition)
 -- Copy paste shortcuts
+
+
 map.set({ 'n', 'v', 'x' }, '<M-y>', '"+y<CR>')
 map.set({ 'n', 'v', 'x' }, '<M-d>', '"+d<CR>')
 map.set({ 'n', 'v', 'x' }, '<M-p>', '"+p<CR>')
@@ -127,6 +140,7 @@ map.set("n", "<leader>i", function()
 end)
 map.set({ "t" }, "<Esc>", [[<C-\><C-n>]])
 
+-- Make autocommand to open QuickFixList
 vim.api.nvim_create_autocmd("QuickFixCmdPost", {
 	pattern = "make",
 	callback = function()
@@ -150,7 +164,6 @@ map.set("n", "<M-Left>", ":vertical resize -1<CR>")
 map.set("n", "<M-Right>", ":vertical resize +1<CR>")
 
 -- Theme and lualine config
-
 require("lualine").setup {
 	options = {
 		icons_enabled = true,
