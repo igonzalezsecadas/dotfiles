@@ -6,7 +6,6 @@ vim.o.shiftwidth = 2
 vim.o.smartindent = true
 vim.o.winborder = "rounded"
 vim.o.cursorline = true
-vim.o.colorcolumn = "88"
 vim.o.scrolloff = 999
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -107,11 +106,14 @@ map.set("n", "<M-Right>", ":vertical resize +1<CR>")
 
 -- Theme and lualine config
 require("pywal").setup()
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFCC66", bold = true })
+local pywal_core = require('pywal.core')
+local colors = pywal_core.get_colors()
+print(colors.foreground)
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = colors.foreground, bold = true })
 vim.api.nvim_set_hl(0, "CursorLine", {
-	bg = "#292e42", -- Tokyonight (Storm/Moon) cursor line background
+	bg = colors.color1, -- Tokyonight (Storm/Moon) cursor line background
 })
-vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#292e42" })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = colors.color1 })
 local fg_colors = {
 	Normal     = "#c0caf5", -- Main text (pale blue-white)
 	Comment    = "#565f89", -- Dark blue-grey
