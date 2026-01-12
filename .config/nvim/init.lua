@@ -36,6 +36,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-mini/mini.surround" },
 	{ src = "https://github.com/nvim-mini/mini.comment" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 })
 
 -- Plugin setup
@@ -49,6 +50,17 @@ require("luasnip").setup({ enable_autosnippets = true })
 require("luasnip.loaders.from_vscode").lazy_load()
 require("mini.surround").setup()
 require("mini.comment").setup()
+require("nvim-treesitter.configs").setup({
+	ensure_installed = {
+		"lua", "python", "c", "cpp", "java", "html", "css", "json", "yaml", "bash",
+	},
+	auto_install = true,
+	highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+})
+
 
 require("blink.cmp").setup({
 	signature = { enabled = true },
@@ -65,7 +77,6 @@ require("blink.cmp").setup({
 	},
 })
 
-vim.cmd("colorscheme tokyonight-storm")
 
 
 -- Keymaps
@@ -206,3 +217,6 @@ require("lualine").setup {
 	inactive_winbar = {},
 	extensions = {}
 }
+
+
+vim.cmd("colorscheme tokyonight-storm")
