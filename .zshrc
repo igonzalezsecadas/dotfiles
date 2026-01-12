@@ -23,18 +23,9 @@ zinit cdreplay -q
 # End of zinit and plugin loading section
 
 # Aliases
-alias ls='ls --color'
-alias lsa='ls -a'
-alias lsal='ls -la'
+alias ll='ls -la --color'
 
-alias tmn='tmux new-session -t'
-alias tma='tmux a -t' 
-
-alias gst='git status'
-alias gc='git commit'
-alias ga='git add'
-alias gpo='git push origin'
-alias gpu='git pull origin'
+alias tmd='tmux detach' 
 
 proyectos_key() {
   LBUFFER+=" ~/.config/tmux/repos.sh"
