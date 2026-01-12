@@ -83,13 +83,47 @@ map.set({ 'n', 'v', 'x' }, '<M-y>', '"+y<CR>')
 map.set({ 'n', 'v', 'x' }, '<M-d>', '"+d<CR>')
 map.set({ 'n', 'v', 'x' }, '<M-p>', '"+p<CR>')
 map.set({ 'i', 'c' }, '<M-p>', '<C-r>+')
+map.set({ "t" }, "<Esc>", [[<C-\><C-n>]])
+
 map.set("n", "<leader>i", function()
-	vim.cmd.new()
-	vim.cmd.term()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 10)
+	local term_buf = -1
+	for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+		if vim.bo[buf].buftype == "terminal" then
+			term_buf = buf
+			break
+		end
+	end
+
+	local term_win = -1
+	if term_buf ~= -1 then
+		term_win = vim.fn.bufwinnr(term_buf)
+	end
+
+	if term_win ~= -1 then
+		vim.api.nvim_win_close(term_win, true)
+	elseif term_buf ~= -1 then
+		vim.cmd("split")
+		vim.cmd("buffer " .. term_buf)
+		vim.cmd("wincmd J")
+		vim.api.nvim_win_set_height(0, 10)
+		vim.cmd("startinsert")
+	else
+		vim.cmd("new")
+		vim.cmd("term")
+		vim.cmd("wincmd J")
+		vim.api.nvim_win_set_height(0, 10)
+		vim.cmd("startinsert")
+	end
 end)
-map.set({ "t", "n" }, "<Esc>", [[<C-\><C-n>]])
+
+vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+	pattern = "make",
+	callback = function()
+		if #vim.fn.getqflist() > 0 then
+			vim.cmd("copen 10")
+		end
+	end,
+})
 
 -- Navigate windows
 map.set("n", "<M-h>", "<C-w>h")
