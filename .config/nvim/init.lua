@@ -17,6 +17,8 @@ vim.diagnostic.config({ virtual_text = true })
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.o.hlsearch = false
+vim.o.termguicolors = true
+
 
 -- Package management
 vim.pack.add({
@@ -33,6 +35,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-mini/mini.surround" },
 	{ src = "https://github.com/nvim-mini/mini.comment" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 })
 
 -- Plugin setup
@@ -46,6 +49,17 @@ require("luasnip").setup({ enable_autosnippets = true })
 require("luasnip.loaders.from_vscode").lazy_load()
 require("mini.surround").setup()
 require("mini.comment").setup()
+
+require("nvim-treesitter.configs").setup({
+	ensure_installed = {
+		"lua", "python", "c", "cpp", "java", "html", "css", "json", "yaml", "bash",
+	},
+	auto_install = true,
+	highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+})
 
 require("blink.cmp").setup({
 	signature = { enabled = true },
@@ -71,7 +85,11 @@ map.set('n', '<leader>q', ':quit<CR>')
 map.set('n', '<leader>r', ':make<CR>')
 map.set('n', '<leader>lf', vim.lsp.buf.format)
 map.set('n', '<leader>cd', ":NvimTreeToggle<CR>")
-map.set('n', 'ff', MiniPick.builtin.files)
+
+
+map.set('n', 'ff', function()
+  MiniPick.builtin.cli({ command = { 'rg', '--files', '--hidden', '--no-ignore-vcs' } })
+end)
 map.set('n', 'fg', MiniPick.builtin.grep_live)
 map.set('n', 'fh', MiniPick.builtin.help)
 map.set('n', 'gd', vim.lsp.buf.definition)
@@ -79,6 +97,9 @@ map.set('n', 'gd', vim.lsp.buf.definition)
 -- grn (lsp rename)
 -- grt (go to type definition)
 -- Copy paste shortcuts
+
+
+
 map.set({ 'n', 'v', 'x' }, '<M-y>', '"+y<CR>')
 map.set({ 'n', 'v', 'x' }, '<M-d>', '"+d<CR>')
 map.set({ 'n', 'v', 'x' }, '<M-p>', '"+p<CR>')
@@ -142,7 +163,6 @@ map.set("n", "<M-Right>", ":vertical resize +1<CR>")
 require("pywal").setup()
 local pywal_core = require('pywal.core')
 local colors = pywal_core.get_colors()
-print(colors.foreground)
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = colors.foreground, bold = true })
 vim.api.nvim_set_hl(0, "CursorLine", {
 	bg = colors.color1, -- Tokyonight (Storm/Moon) cursor line background
