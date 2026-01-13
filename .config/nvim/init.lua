@@ -56,9 +56,9 @@ require("nvim-treesitter.configs").setup({
 	},
 	auto_install = true,
 	highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
+		enable = true,
+		additional_vim_regex_highlighting = false,
+	},
 })
 
 require("blink.cmp").setup({
@@ -88,7 +88,7 @@ map.set('n', '<leader>cd', ":NvimTreeToggle<CR>")
 
 
 map.set('n', 'ff', function()
-  MiniPick.builtin.cli({ command = { 'rg', '--files', '--hidden', '--no-ignore-vcs' } })
+	MiniPick.builtin.cli({ command = { 'rg', '--files', '--hidden', '--no-ignore-vcs' } })
 end)
 map.set('n', 'fg', MiniPick.builtin.grep_live)
 map.set('n', 'fh', MiniPick.builtin.help)
