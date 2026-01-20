@@ -3,3 +3,4 @@
 .config/go
 .config/mozilla
 .config/kitty/current-theme.conf
+.config/nvim/nvim-pack-lock.json
