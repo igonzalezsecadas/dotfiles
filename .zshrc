@@ -23,8 +23,8 @@ zinit cdreplay -q
 # End of zinit and plugin loading section
 
 # Aliases
-alias ll='ls -la --color'
-
+alias ll='eza -la --color'
+alias ls='eza'
 alias tmd='tmux detach' 
 
 proyectos_key() {
