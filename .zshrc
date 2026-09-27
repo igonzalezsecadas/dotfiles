@@ -71,3 +71,6 @@ TRANSIENT_PROMPT_TRANSIENT_PROMPT='$(starship module character)'
 else
     PROMPT='%n@%m %~ %# '
 fi
+
+# Created by `pipx` on 2026-09-27 17:17:07
+export PATH="$PATH:/home/mayboll/.local/bin"
